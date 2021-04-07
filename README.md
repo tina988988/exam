@@ -1,4 +1,5 @@
 # exam
+// I renamed the picture, so I reupdated them then.
 About:
 We need to creat a square signal wave that rise to the peak(3V) in different of the period by using DAC. Also, shown the condition on uLCD. Then use ADC to detect it and sample it. Then plot out the ADC data points by Matplotlib.
 
@@ -23,4 +24,4 @@ As the signal is generated, save the data points to a ADC matrix and save it.
 Analysis:
 Then plot the data points by Matplotlib and we can see the wave is different.
 
-// I renamed the picture, so I reupdated them then.
+
