@@ -29,7 +29,7 @@ int sample = 1000;
 int j, d = 0;
 int g = 0;
 
-float ADCdata[1000];
+float ADCdata[4004];
 
 void Confirm_print() {
  uLCD.printf("\nConfirm !\n");
@@ -94,7 +94,7 @@ int main(void)
  sw2.rise(Trig_up);
  sw1.rise(Trig_down);
  sw0.rise(Confirm_Freq);
- int k = 0;
+ //int k = 0;
 
  while (1) {
 
@@ -107,23 +107,23 @@ int main(void)
  for (float i = 0.0f; i < 0.9; i += 0.0009f) {
 
  aout = i;
- if ((g >=200) && (g <= 201)) ADCdata[j] = Ain;
+ if ((g >=20) && (g <= 21)) ADCdata[j] = Ain;
  wait_us(5);
  j++;
  }
-if ((g >=200) && (g <= 201)) {
-for(k = 0 ; k < 1000;) {
-    ADCdata[j] = Ain;
-    j++;
-}
-}
+//f ((g >=200) && (g <= 201)) {
+//for(k = 0 ; k < 10000;) {
+    //ADCdata[j] = Ain;
+   // j++;
+//}
+//}
 ThisThread::sleep_for(200ms);
 
  
  for (float a = 0.9; a > 0.0f; a -= 0.0009f) {
 
  aout = a;
- if ((g >=200) && (g <= 201)) ADCdata[j] = Ain;
+ if ((g >=20) && (g <= 21)) ADCdata[j] = Ain;
  wait_us(5);
  j++;
 
@@ -134,20 +134,20 @@ ThisThread::sleep_for(200ms);
  j = 0;
  for (float b = 0.0f; b < 0.9; b+= 0.0009f) {
  aout = b;
- if ((g >=200) && (g <= 201)) ADCdata[j] = Ain;
+ if ((g >=20) && (g <= 21)) ADCdata[j] = Ain;
  wait_ns(10);
  j++;
  }
- if ((g >=200) && (g <= 201)){
- for(k = 0 ; k < 1000;) {
-    ADCdata[j] = Ain;
-    j++;
- }
-}
+ //if ((g >=200) && (g <= 201)){
+ //for(k = 0 ; k < 10000;k) {
+    //ADCdata[j] = Ain;
+    //j++;
+ //}
+//}
  ThisThread::sleep_for(220ms);
  for (float a = 0.9; a > 0.0f; a -= 0.0009f) {
  aout = a;
- if ((g >=200) && (g <= 201)) ADCdata[j] = Ain;
+ if ((g >=20) && (g <= 21)) ADCdata[j] = Ain;
  wait_ns(10);
  j++;
  }
@@ -158,20 +158,20 @@ ThisThread::sleep_for(200ms);
  j = 0;
  for (float b = 0.0f; b < 0.9; b+= 0.0009f) {
  aout = b;
- if ((g >=200) && (g <= 201)) ADCdata[j] = Ain;
+ if ((g >=20) && (g <= 21)) ADCdata[j] = Ain;
  wait_us(25);
  j++;
  }
- if ((g >=200) && (g <= 201)){
- for(k = 0 ; k < 1000;) {
-    ADCdata[j] = Ain;
-    j++;
- }
-}
+ //if ((g >=200) && (g <= 201)){
+ //for(k = 0 ; k < 10000;k++) {
+   // ADCdata[j] = Ain;
+    //j++;
+// }
+//}
  ThisThread::sleep_for(160ms);
  for (float a = 0.9; a > 0.0f; a -= 0.0009f) {
  aout = a;
- if ((g >=200) && (g <= 201)) ADCdata[j] = Ain;
+ if ((g >=20) && (g <= 21)) ADCdata[j] = Ain;
  wait_us(25);
  j++;
  }
@@ -180,26 +180,26 @@ ThisThread::sleep_for(200ms);
  j = 0;
  for (float b = 0.0f; b < 0.9; b+= 0.0009f) {
  aout = b;
- if ((g >=200) && (g <= 201)) ADCdata[j] = Ain;
+ if ((g >=20) && (g <= 21)) ADCdata[j] = Ain;
  wait_us(65);
  j++;
  }
- if ((g >=200) && (g <= 201)){
- for(k = 0 ; k < 1000;) {
-    ADCdata[j] = Ain;
-    j++;
- }
-}
+ //if ((g >=200) && (g <= 201)){
+ //for(k = 0 ; k < 1000;) {
+ //  ADCdata[j] = Ain;
+  //  j++;
+//}
+//}
  ThisThread::sleep_for(80ms);
  for (float a = 0.9; a > 0.0f; a -= 0.0009f) {
  aout = a;
- if ((g >=200) && (g <= 201)) ADCdata[j] = Ain;
+ if ((g >=20) && (g <= 21)) ADCdata[j] = Ain;
  wait_us(65);
  j++;
  }
  }
 
- if (c && (g >= 200) && (g <= 201)) {
+ if (c && (g >= 20) && (g <= 21)) {
  for (int e = 0;e < j; e++) {
  printf("%f\r\n", ADCdata[e]);
  }
